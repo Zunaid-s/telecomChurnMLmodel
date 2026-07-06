@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 📡 Telecom Customer Churn Prediction App
 
 A professional **Streamlit** web application that serves a trained **Decision Tree Pipeline** (`StandardScaler` + `DecisionTreeClassifier`) to predict whether a telecom customer is likely to churn — complete with probability scores, a polished UI, and downloadable results.
@@ -7,33 +8,18 @@ A professional **Streamlit** web application that serves a trained **Decision Tr
 ![scikit--learn](https://img.shields.io/badge/scikit--learn-1.6%2B-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
----
 
 ## 🔍 Overview
 
 Customer churn is one of the costliest problems in the telecom industry. This app lets an analyst, retention team, or support agent enter a customer's account and usage details and instantly get:
 
-- A **churn / no-churn prediction**
-- The **model's confidence (probability)** for each outcome
-- Key **derived business metrics** (Total Charges, Total Usage, Revenue Segment)
-- A **downloadable CSV** of the prediction for record-keeping
 
 The underlying model was trained and tuned in `ML_Flow_and_Supervised_Learning.ipynb` on the classic [Telecom Churn dataset](https://www.kaggle.com/datasets/becksddf/churn-in-telecoms-dataset), then exported as a scikit-learn `Pipeline` (`best_model.pkl`) via `joblib`.
 
----
 
 ## ✨ Features
 
-- 🎨 **Modern, card-based UI** with a custom gradient header and clean typography
-- 🧭 **Sidebar** with model metadata, usage instructions, and a live session counter
-- 📝 **Structured customer input form** — Account Profile, Day & Evening usage, Night & International usage
-- 🔮 **One-click prediction** with a clear risk verdict (High Risk / Low Risk)
-- 📊 **Prediction probability breakdown** via progress bars and metrics
-- 🛡️ **Robust error handling** — missing model file, feature mismatches, NaNs, or unexpected exceptions all fail gracefully with helpful messages
-- ⬇️ **Download predictions** as CSV — both single predictions and full session history
-- 🔬 **Transparency panel** showing the exact 67-feature vector sent to the model
 
----
 
 ## 🧠 Model Details
 
@@ -60,7 +46,6 @@ The app reproduces the exact feature engineering performed during training:
 
 Highly correlated raw columns (individual day/eve/night/intl charge fields and `Number vmail messages`) were dropped during training and are **not** part of the final 67-feature vector — they're only used transiently to compute `Total Charges`.
 
----
 
 ## 📁 Project Structure
 
@@ -74,14 +59,11 @@ Highly correlated raw columns (individual day/eve/night/intl charge fields and `
 └── README.md                           # You are here
 ```
 
----
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Python 3.9+
-- pip
 
 ### Installation
 
@@ -108,7 +90,6 @@ The app will open automatically at `http://localhost:8501`.
 
 > ⚠️ Make sure `best_model.pkl` is in the same directory as `app.py` — the app loads it on startup and will show a friendly error if it's missing.
 
----
 
 ## 🖥️ Usage
 
@@ -119,32 +100,23 @@ The app will open automatically at `http://localhost:8501`.
 5. Optionally expand **"View engineered feature vector"** to inspect the raw model input.
 6. Click **⬇️ Download This Prediction (CSV)** to save the result, or download the full **session history**.
 
----
 
 ## 🛠️ Tech Stack
 
-- [Streamlit](https://streamlit.io/) — UI framework
-- [scikit-learn](https://scikit-learn.org/) — model pipeline
-- [pandas](https://pandas.pydata.org/) / [NumPy](https://numpy.org/) — data handling
-- [joblib](https://joblib.readthedocs.io/) — model serialization
 
----
 
 ## 📌 Notes & Limitations
 
-- The model was trained on a fixed snapshot of historical data; retrain periodically as customer behavior evolves.
-- `Revenue_Segment` bucketing uses **fixed tertile boundaries** learned from the original training set, so it will remain consistent for new customers but may drift in accuracy if the underlying charge distribution shifts significantly over time.
-- This tool is intended to support retention decision-making, not to replace human judgment.
 
----
 
 ## 📄 License
 
 This project is licensed under the MIT License — feel free to use, modify, and distribute it.
 
----
 
 ## 🙌 Acknowledgements
 
-- Dataset: [Telecom Churn Dataset (Kaggle)](https://www.kaggle.com/datasets/becksddf/churn-in-telecoms-dataset)
-- Built with ❤️ using Streamlit and scikit-learn
+=======
+# telecomChurnMLmodel
+Streamlit app that predicts telecom customer churn using a trained Decision Tree pipeline, with probability scores and downloadable results.
+>>>>>>> 0fb3c63 (All files added)
